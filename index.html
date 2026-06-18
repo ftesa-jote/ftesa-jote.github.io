@@ -1,48 +1,142 @@
 <!doctype html>
-<html lang="en">
+<html lang="sq">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Ftesa Jote - a simple online invitation website." />
-    <meta name="theme-color" content="#f6e7df" />
-    <title>Ftesa Jote</title>
+    <meta
+      name="description"
+      content="Ftesa Jote - ftesa elektronike për dasma, kanagjegje, fejesa, bride to be, ditëlindje, syneti dhe më shumë."
+    />
+    <meta name="theme-color" content="#f4e1d7" />
+    <title>Ftesa Jote | Ftesa Elektronike</title>
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main class="page-shell">
-      <section class="hero-card" aria-labelledby="hero-title">
-        <p class="eyebrow">Online invitation website</p>
-        <h1 id="hero-title">Ftesa Jote</h1>
-        <p class="lead">
-          A clean, modern invitation landing page for your event details, RSVP link,
-          and a first look that feels warm and personal.
-        </p>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+    <div class="ambient ambient-three"></div>
 
-        <div class="cta-row">
-          <a class="primary-btn" href="#details">View invitation</a>
-          <a class="secondary-btn" href="mailto:hello@ftesa-jote.com">Contact us</a>
+    <main class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="#home" aria-label="Ftesa Jote">
+          <img src="assets/ftesa-jote-logo.png" alt="Logo Ftesa Jote" />
+          <span>
+            <strong>Ftesa Jote</strong>
+            <em>Ftesa digjitale për çdo festë</em>
+          </span>
+        </a>
+
+        <nav class="nav-links" aria-label="Navigimi kryesor">
+          <a href="#modelet">Modelet</a>
+          <a href="#shperndarja">Shërbimet</a>
+          <a href="#kontakt">Kontakt</a>
+        </nav>
+      </header>
+
+      <section class="hero-card" id="home" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Ftesa elektronike me stil</p>
+          <h1 id="hero-title">Ftesa Jote</h1>
+          <p class="lead">
+            Ofrojmë ftesa elektronike për eventin tuaj - dasma, kanagjegje, fejesa,
+            bride to be, ditëlindje, syneti, dhe të tjera.
+          </p>
+
+          <div class="cta-row">
+            <a class="primary-btn" href="#kontakt">Na shënoni për kërkesa</a>
+            <a class="secondary-btn" href="https://www.instagram.com/ftesa_jote/" target="_blank" rel="noreferrer">Instagram</a>
+          </div>
+
+          <div class="social-strip" aria-label="Rrjetet sociale">
+            <a class="social-pill" href="https://www.instagram.com/ftesa_jote/" target="_blank" rel="noreferrer">Instagram</a>
+            <span class="social-pill muted">TikTok së shpejti</span>
+          </div>
         </div>
 
-        <div class="details-grid" id="details">
-          <article>
-            <span>Date</span>
-            <strong>Coming soon</strong>
+        <aside class="hero-art" aria-label="Pamje e markës Ftesa Jote">
+          <img src="assets/ftesa-jote-logo.png" alt="Logo Ftesa Jote" />
+        </aside>
+      </section>
+
+      <section class="content-grid" id="modelet" aria-labelledby="models-title">
+        <div class="section-heading">
+          <p class="eyebrow">Modelet tona</p>
+          <h2 id="models-title">E përshtatur për çdo lloj feste</h2>
+        </div>
+
+        <div class="card-grid">
+          <article class="info-card">
+            <span>Dasma</span>
+            <strong>Elegante dhe romantike</strong>
+            <p>Modele me tone të buta, detaje florale dhe hapësirë për programin e dasmës.</p>
           </article>
-          <article>
-            <span>Location</span>
-            <strong>Online</strong>
+          <article class="info-card">
+            <span>Kanagjegje</span>
+            <strong>Plot ngjyra dhe energji</strong>
+            <p>Ftesa të gjalla për mbrëmje të bukura me stil të veçantë dhe modern.</p>
           </article>
-          <article>
-            <span>RSVP</span>
-            <strong>Simple link</strong>
+          <article class="info-card">
+            <span>Fejesa</span>
+            <strong>E thjeshtë dhe e rafinuar</strong>
+            <p>Një dizajn i pastër për njoftimin e bukur të ditës suaj të fejesës.</p>
+          </article>
+          <article class="info-card">
+            <span>Bride to be</span>
+            <strong>Cute dhe trendy</strong>
+            <p>Ftesa për festa intime me detaje delikate dhe atmosferë festive.</p>
+          </article>
+          <article class="info-card">
+            <span>Ditëlindje</span>
+            <strong>Argëtim për të gjitha moshat</strong>
+            <p>Shabllone për fëmijë, adoleshentë dhe festa surprizë për të rritur.</p>
+          </article>
+          <article class="info-card">
+            <span>Syneti</span>
+            <strong>Traditë me stil modern</strong>
+            <p>Ftesa të personalizuara që e bëjnë edhe këtë ditë të duket speciale.</p>
           </article>
         </div>
       </section>
 
-      <aside class="art-card" aria-label="Invitation illustration">
-        <img src="assets/invite-illustration.svg" alt="Minimal invitation illustration" />
-      </aside>
+      <section class="content-grid split" id="shperndarja" aria-labelledby="services-title">
+        <div class="section-heading">
+          <p class="eyebrow">Çfarë ofrojmë</p>
+          <h2 id="services-title">Ftesa të gatshme për rrjetet dhe telefonin</h2>
+        </div>
+
+        <div class="service-list">
+          <article class="service-item">
+            <strong>Optimale për telefon dhe PC</strong>
+            <p>Faqja punon bukur në çdo ekran, me animacione të lehta dhe lexim të qartë.</p>
+          </article>
+          <article class="service-item">
+            <strong>Përshtatje sipas eventit</strong>
+            <p>Mund të ndryshojmë ngjyrat, tekstet, fotot dhe strukturën sipas kërkesës.</p>
+          </article>
+          <article class="service-item">
+            <strong>Shpërndarje e shpejtë</strong>
+            <p>Ideal për dërgim në WhatsApp, Instagram dhe në çdo kanal që përdorni.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact-panel" id="kontakt" aria-labelledby="contact-title">
+        <div>
+          <p class="eyebrow">Kontakt</p>
+          <h2 id="contact-title">Na shënoni për kërkesa</h2>
+          <p>
+            Na shkruani në <a href="mailto:ftesa.elektronike@gmail.com">ftesa.elektronike@gmail.com</a>
+            ose na ndiqni në Instagram për modelet më të reja.
+          </p>
+        </div>
+
+        <div class="contact-actions">
+          <a class="primary-btn" href="mailto:ftesa.elektronike@gmail.com">Dërgo email</a>
+          <a class="secondary-btn" href="https://www.instagram.com/ftesa_jote/" target="_blank" rel="noreferrer">Na gjeni në Instagram</a>
+          <span class="social-pill muted wide">TikTok do të shtohet shumë shpejt</span>
+        </div>
+      </section>
     </main>
   </body>
 </html>
