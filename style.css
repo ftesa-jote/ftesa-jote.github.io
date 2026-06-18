@@ -153,11 +153,12 @@ a {
 
 .hero {
   position: relative;
-  min-height: 100svh;
+  min-height: 92svh;
   display: grid;
   align-items: end;
   padding: 6.4rem min(5vw, 4rem) 1rem;
   overflow: hidden;
+  background: linear-gradient(145deg, #fff7f2 0%, #f5d9ce 58%, #e9b7a7 100%);
 }
 
 .hero-bg,
@@ -170,14 +171,15 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 64% center;
+  object-position: 63% center;
+  opacity: 0.92;
   animation: heroBreath 12s ease-in-out infinite;
 }
 
 .hero-shade {
   background:
-    linear-gradient(180deg, rgba(50, 30, 24, 0.08) 0%, rgba(50, 30, 24, 0.06) 28%, rgba(50, 30, 24, 0.68) 100%),
-    radial-gradient(circle at 50% 38%, rgba(255, 255, 255, 0.1), transparent 16rem);
+    linear-gradient(180deg, rgba(255, 248, 244, 0.08) 0%, rgba(67, 37, 28, 0.08) 42%, rgba(67, 37, 28, 0.52) 100%),
+    radial-gradient(circle at 22% 76%, rgba(255, 255, 255, 0.62), transparent 18rem);
 }
 
 .hero-copy {
@@ -211,11 +213,20 @@ h2 {
 
 h1 {
   max-width: 10ch;
-  font-size: clamp(3.15rem, 17vw, 7.6rem);
+  font-size: clamp(2.55rem, 11vw, 5.6rem);
 }
 
 h2 {
-  font-size: clamp(2.2rem, 10vw, 5rem);
+  font-size: clamp(2.05rem, 7vw, 4rem);
+}
+
+.demos h2 {
+  font-size: clamp(1.85rem, 6vw, 3.1rem);
+}
+
+.service-copy h2,
+.finale-copy h2 {
+  font-size: clamp(1.9rem, 6.6vw, 3.25rem);
 }
 
 .lead,
@@ -233,8 +244,7 @@ h2 {
   font-size: clamp(1rem, 3.8vw, 1.24rem);
 }
 
-.hero-actions,
-.contact-actions {
+.hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 0.72rem;
@@ -254,13 +264,19 @@ h2 {
   transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
 }
 
-.btn.primary {
+.btn.instagram {
   color: #fffaf6;
-  background: linear-gradient(135deg, #7d3f30, #b97750);
-  box-shadow: 0 14px 28px rgba(113, 54, 38, 0.22);
+  background: linear-gradient(135deg, #833ab4 0%, #fd1d1d 48%, #fcb045 100%);
+  box-shadow: 0 14px 28px rgba(162, 64, 93, 0.24);
 }
 
-.btn.secondary {
+.btn.tiktok {
+  color: #fff;
+  background: linear-gradient(135deg, #111 0%, #303030 55%, #00d1c1 130%);
+  box-shadow: 0 14px 28px rgba(17, 17, 17, 0.2);
+}
+
+.btn.demo-btn {
   color: #783d2f;
   border: 1px solid rgba(112, 58, 40, 0.18);
   background: rgba(255, 255, 255, 0.58);
@@ -268,22 +284,6 @@ h2 {
 
 .btn:hover {
   transform: translateY(-2px);
-}
-
-.social-line {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.55rem;
-  margin-top: 1rem;
-  color: #704334;
-  font-size: 0.93rem;
-}
-
-.social-line span {
-  padding: 0.38rem 0.7rem;
-  border: 1px solid rgba(120, 67, 48, 0.14);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.46);
 }
 
 .promise-strip,
@@ -511,12 +511,12 @@ h2 {
 }
 
 .finale {
-  min-height: 32rem;
+  min-height: 34rem;
   display: grid;
-  align-items: end;
+  align-items: center;
   background:
-    linear-gradient(180deg, rgba(39, 34, 29, 0.02), rgba(39, 34, 29, 0.62)),
-    #2f2b27;
+    radial-gradient(circle at 78% 18%, rgba(255, 255, 255, 0.62), transparent 18rem),
+    linear-gradient(145deg, #fff8f3 0%, #f4d9ce 54%, #e8b8a8 100%);
 }
 
 .finale img {
@@ -525,17 +525,28 @@ h2 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.82;
+  object-position: 68% center;
+  opacity: 0.72;
   animation: softPulse 7s ease-in-out infinite;
+}
+
+.finale::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(255, 248, 244, 0.9) 0%, rgba(255, 248, 244, 0.64) 38%, rgba(255, 248, 244, 0.08) 100%),
+    linear-gradient(180deg, rgba(58, 30, 22, 0.02), rgba(58, 30, 22, 0.18));
 }
 
 .finale-copy {
   position: relative;
-  z-index: 1;
-  max-width: 39rem;
+  z-index: 2;
+  max-width: 34rem;
   padding: clamp(1.1rem, 4vw, 2rem);
   border-radius: 24px;
-  background: rgba(255, 248, 244, 0.78);
+  background: rgba(255, 248, 244, 0.84);
   border: 1px solid rgba(255, 255, 255, 0.34);
   backdrop-filter: blur(16px);
   box-shadow: var(--shadow);
@@ -644,12 +655,19 @@ h2 {
   }
 
   .hero {
-    min-height: 100svh;
+    min-height: 86svh;
     padding: 5.2rem 0.55rem 0.55rem;
   }
 
   .hero-bg {
-    object-position: 71% center;
+    object-position: 57% center;
+    opacity: 0.84;
+  }
+
+  .hero-shade {
+    background:
+      linear-gradient(180deg, rgba(255, 248, 244, 0.2) 0%, rgba(255, 248, 244, 0.26) 34%, rgba(79, 42, 31, 0.5) 100%),
+      radial-gradient(circle at 50% 75%, rgba(255, 255, 255, 0.72), transparent 15rem);
   }
 
   .hero-copy {
@@ -657,11 +675,18 @@ h2 {
   }
 
   h1 {
-    font-size: clamp(3rem, 16vw, 4.9rem);
+    max-width: 11ch;
+    font-size: clamp(2.35rem, 11.5vw, 3.7rem);
   }
 
   h2 {
-    font-size: clamp(2rem, 12vw, 3.35rem);
+    font-size: clamp(1.9rem, 9vw, 2.85rem);
+  }
+
+  .demos h2,
+  .service-copy h2,
+  .finale-copy h2 {
+    font-size: clamp(1.75rem, 8vw, 2.45rem);
   }
 
   .btn {
@@ -712,7 +737,19 @@ h2 {
   }
 
   .finale {
-    min-height: 34rem;
+    min-height: 31rem;
+    align-items: end;
+  }
+
+  .finale img {
+    object-position: 62% center;
+    opacity: 0.66;
+  }
+
+  .finale::after {
+    background:
+      linear-gradient(180deg, rgba(255, 248, 244, 0.14) 0%, rgba(255, 248, 244, 0.42) 36%, rgba(255, 248, 244, 0.94) 100%),
+      linear-gradient(90deg, rgba(255, 248, 244, 0.32), rgba(255, 248, 244, 0.1));
   }
 }
 
