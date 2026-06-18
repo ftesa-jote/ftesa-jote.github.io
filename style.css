@@ -314,6 +314,7 @@ h2 {
   gap: 0.22rem;
   padding: 1rem;
   border-radius: 20px;
+  text-align: center;
 }
 
 .promise-strip strong {
